@@ -1,0 +1,48 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Wed Apr 11 20:56:11 2018
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x000004
+                   .org_2       code   0x000008    program   0x000002
+                   .org_3       code   0x000018    program   0x00003a
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000003      
+                            0x000008    0x000009      
+                            0x000018    0x000051      
+            64 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    BOTAO   0x00001e    program     static C:\Users\logonrm\Desktop\projeto\ex1.asm
+                 DEBOUNCE   0x00003a    program     static C:\Users\logonrm\Desktop\projeto\ex1.asm
+               INCREMENTA   0x00002e    program     static C:\Users\logonrm\Desktop\projeto\ex1.asm
+                   INICIO   0x00001a    program     static C:\Users\logonrm\Desktop\projeto\ex1.asm
+                    LOOP1   0x000042    program     static C:\Users\logonrm\Desktop\projeto\ex1.asm
+                    LOOP2   0x00003e    program     static C:\Users\logonrm\Desktop\projeto\ex1.asm
+                    PRESO   0x000030    program     static C:\Users\logonrm\Desktop\projeto\ex1.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x00001a    program     static C:\Users\logonrm\Desktop\projeto\ex1.asm
+                    BOTAO   0x00001e    program     static C:\Users\logonrm\Desktop\projeto\ex1.asm
+               INCREMENTA   0x00002e    program     static C:\Users\logonrm\Desktop\projeto\ex1.asm
+                    PRESO   0x000030    program     static C:\Users\logonrm\Desktop\projeto\ex1.asm
+                 DEBOUNCE   0x00003a    program     static C:\Users\logonrm\Desktop\projeto\ex1.asm
+                    LOOP2   0x00003e    program     static C:\Users\logonrm\Desktop\projeto\ex1.asm
+                    LOOP1   0x000042    program     static C:\Users\logonrm\Desktop\projeto\ex1.asm
+
+
