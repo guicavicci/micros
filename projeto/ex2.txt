@@ -1,0 +1,59 @@
+#include<P18F452.INC>
+
+ORG OX00
+GOTO INICIO
+
+ORG OX08
+RETFIE
+
+ORG 0X018
+RETFIE
+
+;DEFININDO ENTRADA E SAIDA
+
+INICIO      MOVLW   b'00001100'     
+            MOVWF   TRISB           ;DEFINE RB2 E RB3 COMO ENTRADA
+            CLRF    TRISD
+
+;COMECO PROGRAMA
+
+BOTAO       BTFSC   PORTB, 3
+            GOTO    BOTAO
+            CALL    DEBOUNCE
+            BTFSC   PORTB, 3
+            GOTO    BOTAO
+            MOVLW   .14
+            CPFSEQ  LATD
+INCREMENTA  INCF    LATD, F
+PRESO       BTFSS   PORTB, 3
+            GOTO    PRESO
+            GOTO    BOTAO
+BOTAO_RB2   BTFSC   PORTB, 2
+            GOTO    BOTAO_RB2
+            CALL    DEBOUNCE
+            BTFSC   PORTB, 2
+            GOTO    BOTAO_RB2
+DECREMENTA  DECF    LATD, F
+PRESO       BTFSS   PORTB, 2
+            GOTO    PRESO
+            GOTO    BOTAO_RB2
+
+;DEBOUNCE DE 100MS
+
+DEBOUNCE    MOVLW   .100
+            MOVWF   OX80 
+
+LOOP2       MOVLW   .250
+            MOVWF   0X81
+LOOP1       NOP
+            DECFSZ  0X81, F 
+            GOTO    LOOP1
+            DECFSZ  0X80, F
+            GOTO    LOOP2
+            RETURN
+
+
+
+
+
+
